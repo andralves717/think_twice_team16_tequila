@@ -22,7 +22,6 @@ def main(argv):
             prime += [j]
 
 
-
     print(prime)
 
 
