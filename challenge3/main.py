@@ -18,7 +18,7 @@ def main(argv):
                 swaps += 1
 
     
-    f = open("result.txt", "w")
+    f = open("team16_tequila/challenge3/result.txt", "w")
     f.write("Optimal train swapping takes {} swaps.\n".format(swaps))
 
     f.close()
