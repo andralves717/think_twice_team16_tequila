@@ -31,7 +31,7 @@ public class main {
 		}
 		System.out.println(str);
 		
-	    BufferedWriter writer = new BufferedWriter(new FileWriter("result.txt"));
+	    BufferedWriter writer = new BufferedWriter(new FileWriter("team16_tequila/challenge2/result.txt"));
 	    writer.write(str);
 	    writer.close();
     } 
