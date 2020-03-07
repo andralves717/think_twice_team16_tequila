@@ -12,8 +12,8 @@ public class main {
         
         File f1 = new File(filename);
 		Scanner scf = new Scanner(f1);
-		while(scf.hasNextLine()) {
-			String s = scf.next();
+		while(scf.hasNext()) {
+			String s = scf.nextLine();
 			if (s.contains("\"")  && count%2==0 ) {
 				str2 = s.replace("\"", "``");
 				str += str2+" ";
@@ -24,7 +24,10 @@ public class main {
 				count++;
 			}else {
 				str += s + " ";
-			}	
+			}
+			if(scf.hasNext()){
+				str += "\n";
+			}
 		}
 		System.out.println(str);
 		
