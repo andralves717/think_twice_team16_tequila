@@ -10,10 +10,6 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    if(argc < 2 || argc > 2){
-        cout << "Executar como: ./main <Path to input file>\n";
-        return 0;
-    }
     string input = argv[1];
     ifstream file_input (input);
     string lines[3];
