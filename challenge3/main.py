@@ -16,7 +16,7 @@ def main(argv):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 swaps += 1
-
+    
     
     f = open("team16_tequila/challenge3/result.txt", "w")
     f.write("Optimal train swapping takes {} swaps.\n".format(swaps))
