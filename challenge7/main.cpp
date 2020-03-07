@@ -61,10 +61,6 @@ int find_kth(int *v, int n, int k) {
 
 
 int main(int argc, char *argv[]) {
-    if(argc < 2 || argc > 2){
-        cout << "Executar como: ./main <Path to input file>\n";
-        return 0;
-    }
     string input = argv[1];
     ifstream file_input (input);
     string lines[2];
@@ -80,7 +76,7 @@ int main(int argc, char *argv[]) {
     }
 
 
-    ofstream file_output ("team16_tequila/challenge7/result.txt");
+    ofstream file_output ("result.txt");
 
     int* num_array = &nums[0];
 
