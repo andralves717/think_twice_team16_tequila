@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    ofstream file_output ("team16_tequila/challenge1/result.txt");
+    ofstream file_output ("result.txt");
 
     std::string::size_type sz;
     int n = std::stoi (lines[0],&sz);
