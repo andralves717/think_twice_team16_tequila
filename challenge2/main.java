@@ -1,13 +1,10 @@
 
 import java.io.*;
-import java.nio.file.*;
 import java.util.*;
-
 
 public class main {
 	
-	public static void main(String args[]) throws IOException 
-    { 
+	public static void main(String args[]) throws IOException { 
         String filename=args[0];
         String str = "";
         String str2 = "";
