@@ -33,50 +33,18 @@ int main(int argc, char *argv[]) {
         cout << "Argumentos inválidos (r<=n<=20 e l>=1)\n";
         return 0;
     }
-    if (l == n || r == n){
-        if(file_output.is_open()){
-            file_output << 1 << "\n";
-        }
-    }
-    if (l+r == n){
-        int result = 1;
+    int result;
+    if (l == n || r == n) result = 1;
+    else if (l+r == n){
+        result = 1;
         for (int j = 1; j < n; ++j) {
             result *= j;
         }
         result--;
-        cout << result;
-        if (file_output.is_open()){
-            file_output << result << "\n";
-        }
-        return 0;
-    }
-
-    \\
-
-    int a[n];
-    a[0] = l;
-    a[n-1] = r;
-    for (int k = 1; k < n-1; ++k) {
-        a[k] = n;
-    }
-    for (int j = 1; j < n; ++j) {
-        a[j] -= j;
-    }
-    r--;
-    if(r == 1){
-        a[n-1] = 1;
-        for (int j = 0; j < ; ++j) {
-
-        }
-    }
-    int l_tmp = l;
-    for (int j = 0; j < n; ++j) {
-        if(l_tmp == 1) break;
-        a[j] = n - l_tmp-- + 1;
-    }
+    } else result = n - l - r + 1;
 
     if (file_output.is_open()){
-        file_output << k << "\n";
+        file_output << result << endl;
     }
     file_output.close();
     return 0;
