@@ -52,7 +52,7 @@ public class Main {
         treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
         
 
-        FileWriter file = new FileWriter("result.txt");
+        FileWriter file = new FileWriter("/team16_tequila/challenge21/teamresult.txt");
         file.write(treeMap.toString());
         file.close();
 
