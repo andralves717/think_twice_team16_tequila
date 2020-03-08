@@ -11,19 +11,22 @@ public class main {
         
         File f1 = new File(filename);
 		Scanner scf = new Scanner(f1);
-		while(scf.hasNext()) {
-			String s = scf.nextLine();
-			if (s.contains("\"")  && count%2==0 ) {
-				str2 = s.replace("\"", "``");
-				str += str2+" ";
-				count++;
-			}else if(s.contains("\"")){
-				str2 = s.replace("\"", "\"");
-				str += str2;
-				count++;
-			}else {
-				str += s + " ";
+		while(scf.hasNextLine()) {
+			String string = scf.nextLine();
+			for (String s : string.split(" ")) {
+				if (s.contains("\"")  && count%2==0 ) {
+					str2 = s.replace("\"", "``");
+					str += str2+" ";
+					count++;
+				}else if(s.contains(",\"")){
+					str2 = s.replace("\"", "\" ");
+					str += str2;
+					count++;
+				}else {
+					str += s + " ";
+				}
 			}
+			
 			if(scf.hasNext()){
 				str += "\n";
 			}
