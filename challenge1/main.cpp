@@ -24,22 +24,14 @@ int main(int argc, char *argv[]) {
 
     ofstream file_output ("result.txt");
 
-    string::size_type sz;
-    int n = stoi (lines[0],&sz);
-    int p = stoi (lines[1],&sz);
-    if (n < 1 || p < 1 || n > 200 || p > 10101){
-        return 0;
-    }
+    int n = stoi (lines[0]);
+    int p = stoi (lines[1]);
     int k = 0;
     for (k = 1; k < 110; ++k) {
         if(pow(k,n) == p){
             break;
         }
     }
-    if(k == 0 || k >= 110) {
-        return 0;
-    }
-
     if (file_output.is_open()){
         file_output << k << "\n";
     }

@@ -39,7 +39,86 @@ int main(int argc, char *argv[]) {
         result = 1;
         for (int j = 1; j < n; ++j) {
             result *= j;
-        }
+
+1523 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+8º Classificado
+
+0x1C0E6AE
+1437 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+9º Classificado
+
+Coffee Addicts
+1128 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+10º Classificado
+
+Escolinha
+1115 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+11º Classificado
+
+void()
+1100 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+12º Classificado
+
+QUE NERD
+1035 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+13º Classificado
+
+Dirty Bits
+1020 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+14º Classificado
+
+!(RuntimeError)
+687 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+15º Classificado
+
+Think Once
+639 Pontos
+
+Último Commit: 6/3 1:27:38
+
+
+
+16º Classificado}
         result--;
     } else result = n - l - r + 1;
 

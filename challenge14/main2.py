@@ -1,41 +1,43 @@
 import sys
 
+from Graph import *
+
+
 def main(argv):
     lines = []
     with open(argv[1]) as f:
         lines = f.read().splitlines()
         
     cores = lines[0].split(" ")
-    print(cores)
-    n = len(cores)
-    print(n)
-
-    count=0
-    regioes = {}
+    lines = lines[1:]
+    regions = []
+    ret = 0;
     for l in lines:
-        if count==0:
-            cores = l.split(" ")
-            count+=1
-            print(cores)
-            n = len(cores)
-            print(n)
-        else:
-            reg = l.split(" ")
-            if not reg[0][0] in regioes:
-                if regioes.get(reg[0][0]) != None:
-                    regioes[reg[0][0]] = reg[1][0]
-                else:
-                    regioes[reg[0][0]] = str(regioes.get(reg[0][0])) + str(reg[1][0])
-                # stri = ""
-                # if(regioes.get(r[0]) == None):
-                #     stri = str(regioes.get(r[0]))
-                # else:
-                #     stri = str(regioes.get(r[0])) + str(r[1])
-                # regioes.__setitem__(r[0], stri)
+        lst = l.split(" ")
 
-    print(regioes)
+        if len(lst) > 2:
+            ret = 1;
+            string = ''
+            '''
+            middle = int(len(lst)/2)
+            lst_left = lst[:middle]
+            lst_right = lst[middle:]
+            left = ''.join(lst_left)
+            right = ''.join(lst_right)
+            lst = [left, right]
+            '''
+        regions.append(lst)
+    n = len(cores)
 
-    
+    if (not ret):
+        g = Graph(len(lines), cores)
+        g.graph = regions
+        g.graphColouring(n)
+
+    f = open("team16_tequila/challenge3/result.txt", "w")
+    f.write("{}\n".format(string))
+
+    f.close()
 
 main(sys.argv)
 

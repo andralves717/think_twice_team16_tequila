@@ -30,7 +30,9 @@ public class main {
 					str += s + " ";
 				}
 			}
-			
+			if(str.charAt(str.length()-1) == ' ') {
+				str = str.substring(0, str.length() - 1);
+			}
 			if(scf.hasNext()){
 				str += "\n";
 			}
