@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import java.util.Scanner;
 import java.io.*;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) throws IOException {
         HashMap<String, HashMap<String, Integer>> map = new HashMap<>();
