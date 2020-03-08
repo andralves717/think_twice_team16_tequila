@@ -37,8 +37,9 @@ public class main {
         Set<String> s = sorted.keySet();
         for (String str : s) {
             str = str.replace(",", "").replace(".", "").replace("?", "").replace("...", "").replace("\"", "").replace(";", "").replace("!", "").replace(":", "");
-            //System.out.println(str);
+            
             newMap.put(str, list.get(0));
+            // System.out.println("str: " + str);
             // System.out.print(list.get(0) + " ");
             list.remove(0);
         }
@@ -75,7 +76,7 @@ public class main {
     }
 
     public static void lerFicETrocar(String file, Map<String,String> newMap) throws IOException{
-
+        //System.out.println(newMap);
         File log= new File(file);
 
         try{
@@ -87,12 +88,28 @@ public class main {
                 while ((s = br.readLine()) != null) {
                     String[] strings = s.split(" ");
                     for(String str: strings){
-                        totalStr += newMap.get(str) + " ";
+                        if(str.contains(",")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + ", ";
+                        }else if(str.contains(";")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + "; ";
+                        }else if(str.contains(".")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + ". ";
+                        }else if(str.contains("...")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + "... ";
+                        }else if(str.contains("?")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + "? ";
+                        }else if(str.contains("!")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + "! ";
+                        }else if(str.contains(":")){
+                            totalStr += newMap.get(str.substring(0,str.length()-1)) + ": ";
+                        }else{
+                            totalStr += newMap.get(str) + " ";
+                        }
                     }
                     totalStr += "\n";
 
                 }
-                FileWriter fw = new FileWriter("result.txt");
+                FileWriter fw = new FileWriter("team16_tequila/challenge25/result.txt");
                 fw.write(totalStr);
                 fw.close();
             }
