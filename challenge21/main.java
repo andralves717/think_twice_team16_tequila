@@ -14,11 +14,11 @@ public class Main {
 
         Scanner read = new Scanner(new File(args[0]));
 
-        String prev = read.next().trim();
+        String prev = read.next().trim().toLowerCase();
         while(read.hasNext()) {
-            String next = read.next().trim();
+            String next = read.next().trim().toLowerCase();
             while(next.length() <3) {
-                next = read.next().trim();
+                next = read.next().trim().toLowerCase();
             }
 
             if(prev.length() >= 3) {
@@ -46,13 +46,15 @@ public class Main {
             prev = next;
         }
 
-       Map<String, HashMap<String, Integer>> treeMap = new TreeMap<>(map);
+        Map<String, HashMap<String, Integer>> treeMap = new TreeMap<>(map);
 
 
+        treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
+        
 
-       FileWriter file = new FileWriter("result.txt");
-       file.write(treeMap.toString());
-       file.close();
+        FileWriter file = new FileWriter("/team16_tequila/challenge21/teamresult.txt");
+        file.write(treeMap.toString());
+        file.close();
 
 
         
