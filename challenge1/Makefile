@@ -1,4 +1,4 @@
-CXXFLAGS = -Wall -ggdb -pthread
+CXXFLAGS = -Wall -ggdb
 
 LDFLAGS = -lm
 
