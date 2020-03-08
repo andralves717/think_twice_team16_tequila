@@ -18,7 +18,7 @@ public class main {
 				str += str2+" ";
 				count++;
 			}else if(s.contains("\"")){
-				str2 = s.replace("\"", "''");
+				str2 = s.replace("\"", "\"");
 				str += str2;
 				count++;
 			}else {
