@@ -49,7 +49,7 @@ public class main {
         Map<String, HashMap<String, Integer>> treeMap = new TreeMap<>(map);
 
 
-        treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
+        //treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
         
 
         FileWriter file = new FileWriter("/team16_tequila/challenge21/teamresult.txt");
