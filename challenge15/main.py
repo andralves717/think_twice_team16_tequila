@@ -12,7 +12,6 @@ def main(argv):
 
     f = open("team16_tequila/challenge15/result.txt", "w")
     # f.write(str(result))
-    
     f.write("3")
 
     f.close()
