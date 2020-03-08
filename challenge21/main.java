@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import java.util.Scanner;
 import java.io.*;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) throws IOException {
         HashMap<String, HashMap<String, Integer>> map = new HashMap<>();
@@ -49,10 +49,10 @@ public class Main {
         Map<String, HashMap<String, Integer>> treeMap = new TreeMap<>(map);
 
 
-        treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
+        //treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
         
 
-        FileWriter file = new FileWriter("/team16_tequila/challenge21/teamresult.txt");
+        FileWriter file = new FileWriter("team16_tequila/challenge21/result.txt");
         file.write(treeMap.toString());
         file.close();
 

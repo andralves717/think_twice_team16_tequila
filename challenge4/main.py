@@ -29,7 +29,7 @@ def main(argv):
         prime = prime[x:-x]
 
     f = open("team16_tequila/challenge4/result.txt", "w")
-    f.write("{}: {}\n".format(line[0], ' '.join(str(elem) for elem in prime)))
+    f.write("{} {}: {}\n".format(line[0], line[1], ' '.join(str(elem) for elem in prime)))
 
     f.close()
 
