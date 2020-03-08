@@ -24,9 +24,9 @@ int main(int argc, char *argv[]) {
 
     ofstream file_output ("result.txt");
 
-    std::string::size_type sz;
-    int n = std::stoi (lines[0],&sz);
-    int p = std::stoi (lines[1],&sz);
+    string::size_type sz;
+    int n = stoi (lines[0],&sz);
+    int p = stoi (lines[1],&sz);
     if (n < 1 || p < 1 || n > 200 || p > 10101){
         return 0;
     }
